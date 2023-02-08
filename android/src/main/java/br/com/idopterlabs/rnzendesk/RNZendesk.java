@@ -120,17 +120,13 @@ public class RNZendesk extends ReactContextBaseJavaModule {
 
         VisitorInfo visitorInfo = builder.build();
         profileProvider.setVisitorInfo(visitorInfo, null);
-        //profileProvider.addVisitorTags(["HR"], null);
-        if (options.hasKey("note")) {
-          profileProvider.setVisitorNote(options.getString("note"));
-        }
 
         ChatProvidersConfiguration.Builder chatProvidersBuilder = ChatProvidersConfiguration.builder();
         chatProvidersBuilder.withVisitorInfo(visitorInfo);
 
         if (options.hasKey("department")) {
             String departmentName = options.getString("department");
-            chatProvider.setDepartment(departmentName, null);
+            chatProvider.setDepartment("HR", null);
             chatProvidersBuilder.withDepartment(departmentName);
         }
 
