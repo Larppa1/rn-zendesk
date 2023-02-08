@@ -117,6 +117,10 @@ public class RNZendesk extends ReactContextBaseJavaModule {
         if (options.hasKey("phone")) {
             builder = builder.withPhoneNumber(options.getString("phone"));
         }
+      
+        if (options.hasKey("tags")) {
+            builder = builder.withTags(options.getString("tags"));
+        }
 
         VisitorInfo visitorInfo = builder.build();
         profileProvider.setVisitorInfo(visitorInfo, null);
