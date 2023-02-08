@@ -126,7 +126,7 @@ public class RNZendesk extends ReactContextBaseJavaModule {
 
         if (options.hasKey("department")) {
             String departmentName = options.getString("department");
-            chatProvider.setDepartment("HR", null);
+            chatProvider.setDepartment("IT Tuki", null);
             chatProvidersBuilder.withDepartment(departmentName);
         }
 
