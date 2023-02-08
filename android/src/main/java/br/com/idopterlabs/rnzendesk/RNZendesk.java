@@ -120,7 +120,7 @@ public class RNZendesk extends ReactContextBaseJavaModule {
 
         VisitorInfo visitorInfo = builder.build();
         profileProvider.setVisitorInfo(visitorInfo, null);
-        profileProvider.addVisitorTags(options.getString("tags"));
+        profileProvider.addVisitorTags(["HR"]);
 
         ChatProvidersConfiguration.Builder chatProvidersBuilder = ChatProvidersConfiguration.builder();
         chatProvidersBuilder.withVisitorInfo(visitorInfo);
